@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header, footer {
+    padding: 1em 2em;
+}
+h1 {
+    margin: 0;
+    padding: .67em 0;
+}
+img {
+    max-width: 100%;
+}
+main {
+    padding: 1em 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+    grid-gap: 2em;
+    justify-items: center;
+}
+main img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.klein {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+.klein img, .klein p {
+    grid-column: 1;
+    grid-row: 1;
+}
+.klein p {
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: 900;
+    text-align: center;
+    text-shadow: 0 0 4px #000;
+}
+
+.inlog-knop{
+    width: 2em;
+    float: right;
+    margin-top: 25px;
+}
+
+/* modaal opmaken */
+.modaal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.7);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.modaal-container {
+    background-color: #fff;
+    max-width: 70vh;
+    padding: 2em;
+    max-height: 80vh;
+    overflow: auto;
+    animation: schuif-binnen .6s cubic-bezier(.17,.67,.8,1.47) forwards;
+}
+
+.sluit-knop {
+    float: right;
+    font-size: 2em;
+}
+
+.sluit-knop:hover {
+    color: red;
+}
+
+#inlogknop {
+    font-size: 2em;
+    padding: 0;
+    margin: 0 auto;
+}
+
+#inlogknop:hover {
+    color: magenta;
+}
+
+.validatie img {
+    height: 1em;
+    width: auto;
+    border: 0;
+    margin: 0 .3em;
+    cursor: pointer;
+}
+
+@keyframes schuif-binnen {
+    0% {margin-top: 90vh}
+    100% {margin-top: 0}
+}
+@-o-keyframes schuif-binnen {
+    0% {margin-top: 90vh}
+    100% {margin-top: 0}
+}
+@-ms-keyframes schuif-binnen {
+    0% {margin-top: 90vh}
+    100% {margin-top: 0}
+}
+@-webkit-keyframes schuif-binnen {
+    0% {margin-top: 90vh}
+    100% {margin-top: 0}
+}
+@-moz-keyframes schuif-binnen {
+    0% {margin-top: 90vh}
+    100% {margin-top: 0}
+}
+
+#buttonlogin {
+    padding: 1em;
+    border-radius: 2em;
+    color: white;
+    background-color: #ff33cc;
+    border-color: black;
+}
+
+input[type=text] {
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+input[type=password] {
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+input[type=text]:focus {
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: #ff33cc;
+}
+
+input[type=password]:focus {
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: #ff33cc;
+}
+
+label {
+    text-shadow: 2px 2px #0eb9e9;
+    color: magenta;
+}
